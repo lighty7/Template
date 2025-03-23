@@ -1,0 +1,385 @@
+/* CSS Variables */
+:root {
+    --primary-color: #1abc9c; /* Teal */
+    --dark-gray: #333;
+    --light-gray: #777;
+    --white: #fff;
+    --background-light: #f5f5f5;
+  }
+  
+  /* Global Styles */
+  body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark-gray);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  /* Header Styles */
+  header {
+    position: relative;
+    /* Make sure this points to your actual background image */
+    background: url('./img/3.jpg') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  header::before {
+    /* Dark overlay across the entire header background */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity if needed */
+    z-index: 1;
+  }
+  
+  header > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Navigation */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-left: 1rem;
+  }
+  
+  .nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .hamburger {
+    z-index: 20;
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  /* Hero Section */
+  .hero {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Let it fill available space if needed */
+    flex-direction: column;
+    min-height: 200px; /* optional */
+  }
+  
+  /* The translucent box behind hero text */
+  .hero-content {
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent black box */
+    padding: 2rem;
+    border-radius: 8px;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+  
+  /* Button Styles */
+  button {
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .btn-outline {
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+  }
+  
+  .solid {
+    background: var(--primary-color);
+    color: var(--white);
+  }
+  
+  .white {
+    background: var(--white);
+    color: var(--dark-gray);
+  }
+  
+  /* Introduction Section */
+  .introduction {
+    background: var(--background-light);
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .introduction i {
+    font-size: 2rem;
+    color: var(--light-gray);
+    margin-bottom: 1rem;
+  }
+  
+  .introduction h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .introduction p {
+    font-size: 1rem;
+    color: var(--light-gray);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Features Section */
+  .features {
+    background: #e6f2f2; /* Light teal */
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .features h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+  }
+  
+  .icon {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .icon i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .icon p {
+    font-size: 0.9rem;
+    color: var(--light-gray);
+  }
+  
+  /* Checklist Section */
+  .checklist {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    background: var(--background-light);
+  }
+  
+  .checklist-item {
+    text-align: center;
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .checklist-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .checklist-item h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .checklist-item p {
+    font-size: 0.9rem;
+    color: var(--light-gray);
+  }
+  
+  /* Gallery Section */
+  .gallery {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .gallery h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .gallery-item h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .gallery-item p {
+    font-size: 0.9rem;
+    color: var(--light-gray);
+  }
+  
+  /* Call to Action Section */
+  .cta {
+    position: relative;
+    /* Make sure this points to your actual CTA background image */
+    background: url('images/forest-cta.jpg') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .cta > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .cta .social-icons a {
+    color: var(--white);
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  /* Footer Section */
+  footer {
+    background: var(--dark-gray);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    /* Navigation */
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: var(--dark-gray);
+      display: none;
+    }
+    .nav-links.active {
+      display: block;
+    }
+    .nav-links li {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .hamburger {
+        z-index:10;
+      display: block;
+    }
+  
+    /* Hero Section */
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    /* Make the hero-content box fit nicely on mobile */
+    .hero-content {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    /* Features Section */
+    .icons {
+      flex-direction: column;
+    }
+  
+    /* Checklist Section */
+    .checklist {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Gallery Section */
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Call to Action Section */
+    .cta .buttons {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  
